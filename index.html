@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CCPHC Resource Search</title>
+<script src="./keywordMap.js"></script>
+</head>
+<body>
+<h1>Search the Resource Hub</h1>
+<input type="text" id="searchInput" placeholder="Enter keyword">
+<button onclick="performSearch()">Search</button>
+
+<script>
+function performSearch() {
+  const rawQuery = document.getElementById('searchInput').value;
+  const result = searchKeyword(rawQuery);
+
+  if (!rawQuery.trim()) {
+    alert("Please enter a keyword to search.");
+    return;
+  }
+
+  if (result) {
+    window.open(result, "_blank");
+  } else {
+    alert("No matching resource found for: " + rawQuery);
+  }
+}
+</script>
+</body>
+</html>
