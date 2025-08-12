@@ -1,453 +1,717 @@
 const keywordMap = {
-  "--age": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--build-confidence-in-media-interviews": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--communication-strategies-in-public-health": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--community-engagement-through-media": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--data-accessibility": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--data-exchange": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--data-informed-policy-development": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--data-standards": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--deliver-clear-public-health-messages": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--differences-in-health-status-by-demographics": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--differences-in-health-status-by-environmental-factors": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--differences-in-health-status-by-social-factors": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--digital-health-communication-tools": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--disabilities": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--educate-community-through-media": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--educational-attainment": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--effective-public-health-messaging-in-media": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--employment-status": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--health-campaign-communication-training": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--health-communication-for-communities": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--health-communication-resources": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--health-communication-training": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--health-education-materials": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--health-inequity": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--health-messaging-workshops": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--health-professionals-media-coaching": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--home-ownership": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--improve-public-health-communication-skills": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--income": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--infographics-for-health-education": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--media-interview-training-for-public-health": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--media-literacy-in-public-health": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--media-outreach-for-public-health": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--media-skills-for-public-health-professionals": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--online-public-health-campaigns": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--press-communication-for-health-agencies": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--priority-setting": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "--public-health-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--public-health-media-training": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--public-health-media-training-series": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--public-health-messaging-tools": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--public-health-spokesperson-training": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--rapid-detection": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--real-time-insights": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--research-accessibility": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "--social-media-health-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link"],
-  "--socioeconomic-factors": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "--speaking-to-the-media-in-public-health": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "--transfer-of-critical-data": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "academic-partnerships": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "accessible-communication": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "accessible-health-communication": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "accessible-health-information": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "accessible-information": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "accountability": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "accurate-communication": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "accurate-messaging": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "adaptive-governance": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "additional-keywords": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "additional-words": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "aggregated-data": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "and-environmental-change": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "announcement": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "assessment": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "asset-based-communication": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "asset-based-messaging": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "asset-mapping": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "assurance": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "attitude-and-knowledge": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "authentic-community-engagement": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "authentic-engagement": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "avoiding-harmful-narratives": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "barrier-reduction": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "barriers-to-care": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "behavior-and-biological-factors": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "building-evidence-base": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "bulleting": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "capacity-building": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "causes": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "certified-health-education-specialists-ches": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "chronic-disease-and-injury-prevention-and-control": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-change": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-change-priority": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-change-training": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-impact-preparedness": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-related-work": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "climate-related-work-assessment": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "co-created-communication": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "co-creation-of-laws-and-plans": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "collaborative-assessment": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "collaborative-governance": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "collaborative-knowledge-building": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "commission-of-social-determinants-of-health": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "commitment": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "commitment-to-health-and-racial-equity": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "communicable-disease-control": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "communicable-disease-specialists": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "communication-channels-eg": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "communication-equity": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "communication-skills": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "communications": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "community-accountability": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-assets": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-based-learning": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "community-based-participatory-research-cbpr": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-based-planning": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "community-based-research": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "community-centered-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "community-centered-messaging": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-centered-policy": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-co-governance": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-driven-policies": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "community-driven-solutions": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "community-engagement": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-engagement-in-governance": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "community-engagement-in-policy": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "community-health-assessment": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "community-health-needs": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-health-status": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "community-influencers": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "community-informed-assessment": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-informed-messaging": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "community-informed-policies": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "community-informed-policymaking": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "community-informed-research": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "community-informed-solutions": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "community-members-as-experts": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "community-needs-and-assets": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "community-partnerships": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "community-relevant-learning": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "community-resilience-policies": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "community-review-boards": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-storytelling": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "community-voice": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "competency-based-education": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "competency-based-training": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "competent-public-health-workforce": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "containment": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "continuing-education-contact-hours": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "continuous-evaluation": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "continuous-improvement": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "continuous-improvement-culture": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "continuous-policy-development": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "continuous-policy-evaluation": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "continuous-quality-improvement-cqi": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "correcting-historical-injustices": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "correlation": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "counteracting-harmful-narratives": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "cross-sector-collaboration": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "cross-sector-data-inputs": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "cross-sector-data-sharing": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "cross-sector-inputs": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "cross-sector-lawmaking": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "cross-sector-partnerships": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "cross-sector-policy-collaboration": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "cross-sectoral-inputs": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "cultural-competence": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "cultural-humility": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "cultural-resonance": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "culturally-appropriate-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "culturally-appropriate-materials": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "culturally-competent-workforce": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "culturally-relevant-assessment": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "culturally-resonant-materials": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "culturally-rooted-strategies": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "culturally-sensitive-communication": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "culture-and-societal-values": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "culture-of-quality": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "data-analysis": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "data-collection": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "data-communication": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "data-democratization": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "data-driven-decision-making": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "data-driven-equity-strategies": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "data-equity": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "data-governance": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "data-informed-decision-making": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "data-interpretation": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "data-monitoring": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "data-sharing": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "data-storytelling": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "data-transparency": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "data-triangulation": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "data-visualization": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "datasets-available": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "decision-making-accountability": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "definitions": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "digital-equity": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "disaggregated-data": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "disease-investigation": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "disparity-monitoring": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "disproportionately-affected-populations": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "diverse-stakeholder-engagement": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "early-warning-systems": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "economic-determinants": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "economic-determinants-of-health": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "effective-governance": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "emergency-preparedness-planning": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "emerging-health-issues": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "emerging-health-threats": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "empowerment": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "empowerment-based-communication": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "engagement": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "environmental-change": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "environmental-determinants": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "environmental-determinants-of-health": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "environmental-level-change": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "epidemiologic-identification": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "epidemiologic-surveillance": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "epidemiology-knowledge": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "equitable-resource-allocation": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "equitable-service-delivery": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "equity": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "equity-centered-assessment": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "equity-centered-communication": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "equity-centered-evaluation": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "equity-dashboards": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "equity-focused-assessment": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "equity-focused-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "equity-focused-policy": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "equity-focused-policymaking": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "equity-in-messaging": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "equity-in-policy": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "equity-in-policymaking": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "equity-informed-analysis": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "ethical-leadership": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "ethics-in-practice": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "ethnicity": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "evaluation-of-policies-and-programs": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "evidence-base-building": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "evidence-based-assessment": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "evidence-based-practice": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "evidence-based-services": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "evidence-informed-decision-making": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "evidence-informed-practice": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "familiarity-of-lhd": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "financial-stewardship": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "focus-groups": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "foundational-document": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "framing": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "framing-strategies": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "funding": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "future-workforce-pipeline": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "gaps-in-data": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "gender": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "geographic-health-disparities": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "governance": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "governance-and-accountability": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "governance-transparency": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "grassroots-engagement": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "grounded-theory": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "health-coalitions": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "health-communication": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-communication-strategy": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-data-analysis": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-disparities": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "health-education": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-education-resources": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "health-education-specialists": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-equity": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-equity-analysis": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-equity-frameworks": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "health-equity-in-access": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-equity-messaging": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "health-equity-metrics": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "health-equity-policies": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-equity-workforce": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-impact-assessment": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-improvement-plans": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "health-improvement-strategies": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "health-in-all-policies": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-indicators": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-inequities": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "health-informatics": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-information-dissemination": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-justice-narratives": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-literacy": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-literacy-promotion": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-mapping": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-monitoring": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-narrative": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "health-narratives": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "health-needs": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "health-outcomes": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "health-outcomes-tracking": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-policy": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "health-policy-development": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "health-promotion": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "health-promotion-messaging": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "health-promotion-strategies": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "health-service-access": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "health-services-access": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-statistics": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-status": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "health-status-indicators": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-surveillance": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-system": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "health-system-accountability": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "health-system-capacity": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "health-systems-improvement": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "health-systems-infrastructure": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "health-systems-support": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "health-trends": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "health-workforce-pipeline": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "healthcare-provider-engagement": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "healthy-places-index": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "historical-health-injustice": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "historical-injustice-correction": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "human-centered": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "human-resources-effectiveness": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "inclusive-coalitions": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "inclusive-communication-strategies": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "inclusive-data-practices": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "inclusive-evaluation": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "inclusive-framing": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "inclusive-governance": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "inclusive-health-communication": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "inclusive-language": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "inclusive-leadership": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "inclusive-messaging": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "inclusive-partnerships": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "inclusive-policy-development": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "inclusive-practice": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "inclusive-survey-design": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "inclusivity": ["https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "infant-health": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "infectious-disease": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "inform-policy-development": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "infrastructure-development": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "infrastructure-investment": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "injury-prevention": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "innovative-data-methods": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "interagency-coordination": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "interagency-data-integration": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "intermediary-determinants-of-social-determinants-of-health": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "intersectional-analysis": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "intersectoral-action": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "intersectoral-analysis": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "intersectoral-collaboration": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "interventions": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "issue": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "job-announcement": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "key-health-influences": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "key-influences-on-health": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "key-informant-interviews": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "key-words": ["https://example.com/ccphc-trainings"],
-  "knowledge-of-lhd": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "knowledge-translation": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "law-and-policy-collaboration": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "leadership-development": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "leadership-in-public-health": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "learning-culture": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "legislative-health-reform": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "lifelong-learning": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "lifelong-learning-culture": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "lifelong-learning-in-public-health": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "linguistically-appropriate-communication": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "linguistically-appropriate-messaging": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "literature-review": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "lived-experience": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "lived-experience-as-data": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "localized-health-messaging": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "macroeconomic-policies": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue"],
-  "mass-media": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "master-certified-health-education-specialists-mches": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "material-circumstances": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "maternal-health": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "maternal-morbidity": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "maternal-mortality": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "maternal-vulnerability": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "message-testing": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "messaging-equity": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "minutes": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "mixed-methods-assessment": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "mixed-methods-qualitative": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "monitoring-frameworks": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "multi-method-data-use": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "multi-sector-collaboration": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "multi-sector-data-integration": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "multi-sector-partnerships": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "multi-sectoral-collaboration": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "multi-sectoral-data": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "multi-source-data-utilization": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "multisector-coalitions": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "multisector-collaboration": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "multisector-data-integration": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "narrative": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "narrative-based-health-data": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "narrative-change": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "narrative-framing": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "needs-assessment": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "newsletter": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "north-star": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "notes": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "or-mitigation-strategies-for-population-health": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "organizational-capacity": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "organizational-culture": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "organizational-excellence": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "organizational-infrastructure": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "organizational-learning": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "participatory-decision-making": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "participatory-evaluation": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "participatory-research": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "partnerships": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "peer-networks": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "perception": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "perceptions-of-public-health": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "performance-measurement": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "policies-on-stratification": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "policy": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "policy-advocacy": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "policy-analysis": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "policy-analysis-and-reform": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "policy-and-law-alignment": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "policy-change": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "policy-co-creation": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "policy-development": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "policy-education": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "policy-equity": ["https://example.com/httpsdocsgooglecomdocumentd1ekcocvbxk27xqkf7esgjmdeihb2wsbakedituspsharingouid108775875733014348658rtpoftruesdtrue", "https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
-  "policy-evaluation": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "policy-input": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "policy-level-change": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "policy-review-and-reform": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "population-health-data": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "population-health-monitoring": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
-  "population-specific-outreach": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "power-analysis": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "power-sharing": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "practice-based-evidence": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "practice-based-insights": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
-  "predictive-analytics-in-public-health": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "preparedness-strategies": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "prevention-strategies": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "preventive-care-access": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "preventive-services": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "promotion": ["https://example.com/httpsdocsgooglecomdocumentd151g022dm13uhap8_xltasmjtrxq7lmf3j5h01n0joyoedituspsharing"],
-  "psychological-factors": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf"],
-  "public-health": ["https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link"],
-  "public-health--informed-policy": ["https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link"],
-  "public-health-accountability": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "public-health-accreditation": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "public-health-analytics": ["https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing"],
-  "public-health-assurance": ["https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "public-health-capacity-building": ["https://example.com/httpsdrivegooglecomdrivefolders1-pflfou-krk-sqpjtwew-ttw09bobw4wuspdrive_link", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link"],
-  "public-health-communication": ["https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01"],
-  "public-health-education": ["https://example.com/httpschhsfresnostateeduccchhsccphcdocumentssjvphc20rhea20report20final20322202220pdf", "https://example.com/httpsdocsgooglecomdocumentd10qxhpo1aowudfhxqjjtkhwm1ln4qrghgoonlfabjgekedituspsharing", "https://example.com/httpsdrivegooglecomdrivefolders1fah0qqksugwyd8qzrurzvseon7h1pbv1uspdrive_link", "https://example.com/httpsdrivegooglecomfiled183svcw7nunpb6dukjkcvxugk8f8p6zb9viewuspdrive_link", "https://example.com/httpsdrivegooglecomfiled1gsesdof_--r0zl5e6sbfp2dtxt8mr-j-viewuspdrive_link", "https://example.com/httpsfresnostatezoomusrecsharey3xu7zxv6bm6lb0ujfcdng8njn7ydyoxbfdxwqafqmtndnc1tuhodnurq5mbvrsue3etrk_mwsvosei8starttime1750438966000pwddguhjkvwn9glfdrbzaaaiaaaaa39zoknlnn75phurpfxlkfnlzctmsb7qzye9kbh9x6rqzlqpnngbjesdpbw6gugmjawmdawmq", "https://example.com/httpsfresnostatezoomusrecshareypp1ox3hu5wxnc09swhr7zjawioep25sxppaersifvk0g_0htqt8kfcbkd7eryzkxjsich3aby6x8oowpwdzm3ryfohp2gfy-lqgvxkc0hcqbyhgk01", "https://example.com/httpsstorymapsarcgiscomstories9034cae4498c4e96aca51f26ca64e931"],
-  "public-health-ethics": ["https://example.com/httpsdrivegooglecomfiled1ofxufwd4n9wlk7m9haqwkmg4k9u_tjcpviewuspsharing"],
-  "public-health-evaluation": ["https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
-  "public-health-evidence-base": ["https://example.com/httpsdrivegooglecomfiled1qzov59c-8fd-inehkz1fxuplcj09xfbaviewuspdrive_link"],
+  "--assessment-
+•--------community-health-needs
+•--------community-assets
+•--------community-engagement
+•--------health-status-indicators
+•--------social-determinants-of-health
+•--------policy,-systems,-and-environmental-change
+•--------cross-sector-collaboration
+•--------multi-sectoral-data
+•--------narrative-based-health-data
+•--------community-informed-research
+•--------root-cause-analysis
+•--------community-voice
+•--------equity-centered-assessment
+•--------lived-experience-as-data
+•--------intersectoral-analysis
+•--------data-triangulation
+•--------culturally-relevant-assessment
+•--------collaborative-knowledge-building
+•--------power-analysis-
+
+policy-development-
+•--------two-way-communication
+•--------trust-building
+•--------asset-based-messaging
+•--------narrative-framing
+•--------health-equity-policies
+•--------policy-education-
+•--------community-driven-solutions
+•--------authentic-engagement
+•--------strengths-based-relationships
+•--------inclusive-coalitions
+•--------multi-sector-partnerships
+•--------community-informed-policies
+•--------public-health-expertise
+•--------historical-injustice-correction
+•--------policy-review-and-reform
+•--------health-impact-assessment
+•--------resilience-building
+•--------cross-sector-lawmaking
+•--------health-in-all-policies
+•--------community-based-planning
+•--------preparedness-strategies
+•--------continuous-policy-evaluation
+•--------systems-level-change
+•--------co-creation-of-laws-and-plans
+•--------policy-level-change
+•--------environmental-level-change
+
+assurance-
+•--------health-services-access
+•--------preventive-care-access
+•--------whole-person-care
+•--------social-services-connection
+•--------barrier-reduction
+•--------health-equity-in-access
+•--------workforce-development
+•--------competent-public-health-workforce
+•--------quality-improvement-culture
+•--------public-health-evaluation
+•--------evidence-based-services
+•--------organizational-infrastructure
+•--------system-level-understanding
+•--------resource-management
+•--------financial-stewardship
+•--------human-resources-effectiveness
+•--------equitable-service-delivery
+•--------service-accessibility
+•--------systemic-quality-assurance
+•--------health-system-capacity
+•--------community-health-needs
+•--------community-assets
+•--------community-engagement
+•--------health-status-indicators
+•--------social-determinants-of-health
+•--------policy,-systems,-and-environmental-change
+•--------cross-sector-collaboration
+•--------multi-sectoral-data
+•--------narrative-based-health-data
+•--------community-informed-research
+•--------root-cause-analysis
+•--------community-voice
+•--------equity-centered-assessment
+•--------lived-experience-as-data
+•--------intersectoral-analysis
+•--------data-triangulation
+•--------culturally-relevant-assessment
+•--------collaborative-knowledge-building
+•--------power-analysis-
+
+policy-development-
+•--------two-way-communication
+•--------trust-building
+•--------asset-based-messaging
+•--------narrative-framing
+•--------health-equity-policies
+•--------policy-education-
+•--------community-driven-solutions
+•--------strengths-based-relationships
+•--------inclusive-coalitions
+•--------multi-sector-partnerships
+•--------community-informed-policies
+•--------public-health-expertise
+•--------historical-injustice-correction
+•--------policy-review-and-reform
+•--------health-impact-assessment
+•--------resilience-building
+•--------cross-sector-lawmaking
+•--------health-in-all-policies
+•--------community-based-planning
+•--------preparedness-strategies
+•--------continuous-policy-evaluation
+•--------systems-level-change
+•--------co-creation-of-laws-and-plans
+•--------policy-level-change
+•--------environmental-level-change
+
+assurance-
+•--------health-services-access
+•--------preventive-care-access
+•--------whole-person-care
+•--------social-services-connection
+•--------barrier-reduction
+•--------health-equity-in-access
+•--------workforce-development
+•--------competent-public-health-workforce
+•--------quality-improvement-culture
+•--------public-health-evaluation
+•--------evidence-based-services
+•--------organizational-infrastructure
+•--------system-level-understanding
+•--------resource-management
+•--------financial-stewardship
+•--------human-resources-effectiveness
+•--------equitable-service-delivery
+•--------service-accessibility
+•--------systemic-quality-assurance
+•--------health-system-capacity
+
+additional-words
+--priority-setting": ["https://drive.google.com/file/d/1eqHYbV3b9RSt0Qjud_zOWBSB9trI1hVN/view?usp=sharing"],
+  "--policy-development-
+•--------accessible-health-information
+•--------health-education-resources
+•--------multi-sector-collaboration
+•--------strategic-communication
+•--------timely-communication
+•--------accurate-messaging
+•--------targeted-communication
+•--------inclusive-messaging
+•--------culturally-appropriate-communication
+•--------health-literacy
+•--------equity-focused-communication
+•--------narrative-framing
+•--------asset-based-messaging
+•--------avoiding-harmful-narratives
+•--------disproportionately-affected-populations
+•--------community-centered-communication
+•--------communication-equity
+•--------population-specific-outreach
+
+assurance-
+•--------lifelong-learning-culture
+•--------public-health-capacity-building
+•--------strategic-planning
+•--------leadership-development
+•--------communication-skills
+•--------public-health-infrastructure
+•--------organizational-learning
+•--------competency-based-training
+
+communications
+--public-health-communication
+--health-communication-resources
+--public-health-messaging-tools
+--health-education-materials
+--communication-strategies-in-public-health
+--health-communication-for-communities
+--social-media-health-communication
+--digital-health-communication-tools
+--online-public-health-campaigns
+--infographics-for-health-education": ["https://drive.google.com/drive/folders/1-pFlFoU-KRk-sqpjtwEW-Ttw09BOBw4w?usp=drive_link"],
+  "--assessment-
+•--------data-analysis
+•--------health-trends
+•--------threat-identification
+•--------emerging-health-issues
+•--------disproportionately-affected-populations
+•--------health-disparities
+•--------root-cause-analysis
+•--------health-inequities
+•--------cross-sector-data-inputs
+•--------multi-sectoral-collaboration
+•--------social-determinants-of-health
+•--------health-surveillance
+•--------data-collection
+•--------data-monitoring
+•--------economic-determinants
+•--------environmental-determinants
+•--------community-health-status
+•--------population-health-monitoring
+•--------equity-focused-assessment
+•--------health-equity-
+
+policy-development-
+•--------health-information-dissemination
+•--------health-education-resources
+•--------accessible-communication
+•--------multi-sector-collaboration
+•--------community-informed-messaging
+•--------health-communication-strategy
+•--------resource-development
+•--------cross-sector-partnerships
+•--------public-health-outreach
+•--------equity-in-messaging
+•--------health-literacy-promotion
+
+-assurance-
+•--------lifelong-learning
+•--------public-health-workforce-development
+•--------knowledge-translation
+•--------practice-based-evidence
+•--------research-to-practice
+•--------evidence-informed-decision-making
+•--------public-health-innovation
+•--------equitable-resource-allocation
+•--------public-health-funding
+•--------resource-distribution
+•--------health-systems-improvement
+•--------infrastructure-investment
+•--------building-evidence-base
+•--------research-integration
+•--------strategic-public-health-planing
+
+additional-keywords
+•------health-indicators
+•------healthy-places-index
+•------health-statistics
+•------health-education-specialists
+•------communicable-disease-specialists
+•------disease-investigation": ["https://drive.google.com/file/d/15DyaK8rp2cyLhPjGg0WuWpASlbujgnJC/view?usp=sharing"],
+  "--assessment-
+•--------commission-of-social-determinants-of-health-
+•--------structural-determinants-of-social-determinants-of-health-inequities
+•--------intermediary-determinants-of-social-determinants-of-health-
+•--------socieconomic-and-political-context
+•--------governance
+•--------macroeconomic-policies
+•--------social-policies
+•--------public-policies
+•--------culture-and-societal-values-
+•--------socieconomic-position
+•--------social-class
+•--------gender
+•--------ethnicity-
+•--------racism-
+•--------social-cohesion-&-social-capital-
+•--------material-circumstances
+•--------behavior-and-biological-factors
+•--------psychological-factors
+•--------health-system-
+•--------equity-
+•--------health-disparities
+•--------root-cause-analysis
+•--------health-inequities
+•--------community-engagement
+•--------health-status-indicators
+•--------community-needs-and-assets
+•--------narrative-
+•--------key-influences-on-health
+•--------data-interpretation
+•--------data-communication
+•--------disaggregated-data
+•--------racial-equity-data
+•--------data-transparency
+•--------cross-sectoral-inputs
+•--------multi-sector-data-integration
+•--------social-determinants-of-health
+•--------environmental-determinants
+•--------equity-informed-analysis-
+•--------health-outcomes-
+•--------inclusive-data-practices
+
+-policy-development-
+•--------multi-sector-partnerships
+•--------health-coalitions
+•--------intersectoral-collaboration
+•--------strengths-based-relationships
+•--------diverse-stakeholder-engagement
+•--------community-driven-solutions
+•--------authentic-engagement
+•--------equity-in-policymaking
+•--------historical-injustice-correction
+•--------policy-analysis-and-reform
+•--------health-impact-assessment
+•--------law-and-policy-collaboration
+•--------health-improvement-strategies
+•--------continuous-policy-development
+•--------policy-evaluation
+•--------policy-co-creation
+•--------systems-level-planning
+•--------community-informed-policies
+•--------inclusive-governance
+•--------intersectoral-action-
+•--------social-participation
+•--------empowerment-
+•--------policies-on-stratification-
+•--------reduce-exposure-to-health-damaging-factors-
+•--------reduce-unequal-consequences-
+•--------interventions-
+•--------social-policies-
+•--------health-policy-
+
+assurance-
+•--------public-health-workforce-capacity
+•--------workforce-diversity
+•--------cultural-competence
+•--------cultural-humility
+•--------lifelong-learning
+•--------public-health-education
+•--------leadership-development
+•--------future-workforce-pipeline
+•--------quality-improvement-culture
+•--------public-health-research-translation
+•--------evidence-informed-practice
+•--------practice-based-evidence
+•--------evaluation-of-policies-and-programs
+•--------mixed-methods-(qualitative,-quantitative,-lived-experience)
+•--------organizational-infrastructure
+•--------resource-equity
+•--------strategic-planning
+•--------ethical-leadership
+•--------transparent-governance
+•--------financial-stewardship
+•--------inclusive-practice
+•--------decision-making-accountability
+•--------community-engagement-in-governance
+
+additional-keywords
+--age
+--socioeconomic-factors-
+--income-
+--disabilities
+--educational-attainment-
+--home-ownership-
+--employment-status
+--data-informed-policy-development-
+--health-inequity,-containment,-or-mitigation-strategies-for-population-health": ["https://chhs.fresnostate.edu/ccchhs/ccphc/documents/SJVPHC%20RHEA%20Report%20Final%203.22.2022%20.pdf"],
+  "--assessment
+•--------key-influences-on-health
+•--------health-narratives
+•--------data-sharing
+•--------community-health-needs
+•--------community-engagement
+•--------multi-sector-collaboration
+•--------cross-sector-inputs
+•--------social-determinants-of-health
+•--------root-causes-of-health-outcomes
+•--------health-equity-
+•--------racial-equity-
+
+policy-development
+•--------two-way-communication
+•--------trust-building
+•--------health-promotion-strategies
+•--------asset-based-communication
+•--------avoiding-harmful-narratives
+•--------multisector-coalitions
+•--------authentic-community-engagement
+•--------strengths-based-relationships
+•--------inclusive-partnerships
+•--------public-health-expertise
+•--------community-informed-solutions
+•--------policy-development
+•--------policy-equity-
+•--------correcting-historical-injustices
+•--------health-equity-policies
+•--------health-impact-assessment
+•--------community-resilience-policies
+•--------cross-sector-policy-collaboration
+•--------health-improvement-plans
+•--------health-in-all-policies
+
+assurance
+•--------health-service-access
+•--------workforce-development
+•--------cultural-humility
+•--------lifelong-learning
+•--------public-health-pipeline
+•--------quality-improvement
+•--------research-practice-integration
+•--------evidence-informed-decision-making
+•--------lived-experience-as-data
+•--------community-based-research
+•--------organizational-infrastructure
+•--------public-health-governance
+•--------ethical-leadership
+•--------resource-management
+•--------commitment-to-health-and-racial-equity-
+•--------commitment
+•--------transparency
+•--------community-accountability
+•--------foundational-document-
+•--------north-star": ["https://drive.google.com/drive/folders/1PQz_h54JrilJHIpCU8CNlHIJGYYpiwN0?usp=drive_link"],
+  "--newsletter
+issue-
+updates
+minutes-
+notes
+recordings
+engagement-
+bulleting-
+reminder
+announcement-
+training
+promotion-
+job-announcement": ["https://docs.google.com/document/d/151g022dm13UHaP8_XltASMjTRxq7LMf3j5H01n0JOYo/edit?usp=sharing"],
+  "--assessment-
+•--------data-interpretation
+•--------data-communication
+•--------multi-method-data-use
+•--------data-visualization
+•--------climate-related-work-assessment-
+•--------qualitative-methods
+•--------quantitative-methods
+•--------key-informant-interviews-
+•--------grounded-theory-
+•--------thematic-analysis-
+
+-policy-development
+•--------accessible-health-information
+•--------health-education-resources
+•--------multi-sector-collaboration
+•--------cross-sector-partnerships
+•--------community-engagement
+•--------authentic-engagement
+•--------public-health-solutions
+•--------public-health--informed-policy
+•--------inform-policy-development-
+•--------policy-evaluation
+•--------health-policy-development
+•--------policy-and-law-alignment
+•--------equity-in-policy
+•--------public-health-in-climate-related-work
+•--------collaborative-governance
+•--------strategic-policy-planning
+
+assurance-
+•--------lifelong-learning-culture
+•--------public-health-education
+•--------research-to-practice
+•--------evidence-informed-decision-making
+•--------mixed-methods-(qualitative,-quantitative,-lived-experience)
+•--------lived-experience-as-data
+•--------data-informed-decision-making
+•--------health-systems-infrastructure
+•--------organizational-capacity
+•--------system-level-understanding
+•--------public-health-system-roles
+•--------evidence-base-building
+•--------leadership-in-public-health
+•--------infrastructure-development
+
+additional-keywords
+•--------climate-change-
+•--------assessment-
+•--------climate-impact-preparedness-
+•--------emergency-preparedness-planning-
+•--------stretegic-plan-
+•--------climate-change-training-
+•--------funding
+•--------communications-
+•--------epidemiology-knowledge
+•--------climate-change-priority-
+•--------infectious-disease
+•--------communicable-disease-control-
+•--------chronic-disease-and-injury-prevention-and-control-
+•--------partnerships-
+•--------vision
+•--------public-health-perspective-
+•--------role-of-local-health-department
+•--------response-planning-&-integration-of-equity-
+•--------perception-
+•--------climate-related-work-
+•--------strategies-
+•--------recommendations-
+•--------human-centered-
+•--------inclusive-framing": ["https://drive.google.com/file/d/1GseSdoF_--r0zL5E6SbFP2DtXT8MR-j-/view?usp=drive_link"],
+  "--assessment-
+•--------health-surveillance
+•--------data-collection
+•--------data-analysis
+•--------health-trends
+•--------emerging-health-issues
+•--------disproportionately-affected-populations
+•--------health-disparities
+•--------health-inequities
+•--------root-cause-analysis
+•--------social-determinants-of-health
+•--------economic-determinants-of-health
+•--------environmental-determinants-of-health
+•--------multisector-collaboration
+•--------cross-sector-data-sharing
+•--------community-health-assessment
+•--------equity-focused-assessment
+•--------interagency-data-integration
+•--------multi-source-data-utilization
+
+policy-development-
+•--------public-health-communication
+•--------health-education
+•--------asset-based-messaging
+•--------narrative-framing
+•--------health-equity-messaging
+•--------culturally-sensitive-communication
+•--------inclusive-health-communication
+•--------counteracting-harmful-narratives
+•--------disproportionately-affected-populations
+•--------equity-centered-communication
+
+assurance-
+•--------research-to-practice-integration
+•--------evidence-informed-decision-making
+•--------practice-based-insights
+•--------public-health-research
+•--------knowledge-translation
+•--------public-health-evidence-base
+•--------system-level-understanding
+•--------public-health-system-roles
+•--------health-systems-support
+
+additional-keywords
+•--------maternal-morbidity-
+•--------maternal-mortality-
+•--------literature-review-
+•--------definitions-
+•--------causes-
+•--------gaps-in-data
+•--------datasets-available-
+•--------maternal-vulnerability-
+•--------vulnerability-index
+•--------infant-health-
+•--------maternal-health": ["https://drive.google.com/file/d/1QZOv59c-8Fd-ineHkZ1fxuPLcj09XFbA/view?usp=drive_link"],
+  "--assessment
+•	health-disparities
+•	health-inequities
+•	community-health-assessment
+•	community-engagement
+•	health-needs
+•	community-assets
+•	health-status
+•	key-health-influences
+•	health-narrative
+•	community-members-as-experts
+•	community-partnerships
+
+policy-development
+•	accurate-communication
+•	timely-communication
+•	communication-channels-(e.g.,-social-media,-mass-media,-peer-networks)
+•	health-promotion-messaging
+•	culturally-appropriate-communication
+•	linguistically-appropriate-communication
+•	community-informed-messaging
+•	culturally-resonant-materials
+•	two-way-communication
+•	trust-building
+•	asset-based-communication
+•	avoiding-harmful-narratives
+•	public-health-education
+•	stakeholder-collaboration
+•	community-influencers
+•	prevention-strategies
+•	health-literacy
+
+assurance
+•	public-health-quality-improvement
+•	culture-of-quality
+•	evidence-informed-decision-making
+•	practice-based-evidence
+•	research-practice-integration
+•	qualitative-data
+•	quantitative-data
+•	lived-experience-as-data
+•	strategic-planning
+•	communication-skills
+•	public-health-research
+•	public-health-practice
+
+additional-keywords-
+•	regional-analysis-
+•	perceptions-of-public-health-
+•	regional-findings-
+•	familiarity-of-lhd
+•	knowledge-of-lhd
+•	correlation-
+•	attitude-and-knowledge
+•	public-health-
+•	thematic-analysis-
+•	focus-groups
+•	weighted-analysis": ["https://drive.google.com/file/d/183SvCW7NUNPB6duKjKcvXugk8f8p6zB9/view?usp=drive_link"],
+  "--assessment
+•--------health-surveillance
+•--------health-monitoring
+•--------epidemiologic-identification
+•--------health-data-analysis
+•--------emerging-health-threats
+•--------racial-health-disparities
+•--------root-cause-analysis
+•--------social-determinants-of-health
+•--------economic-determinants-of-health
+•--------environmental-determinants-of-health
+•--------innovative-data-methods
+•--------health-informatics
+•--------public-health-technologies
+•--------data-communication
+•--------multisector-data-integration
+•--------data-driven-equity-strategies
+•--------injury-prevention
+•--------health-equity-analysis
+•--------predictive-analytics-in-public-health
+•--------data-storytelling
+
+
+-policy-development
+•--------public-health-policy
+•--------policy-input
+•--------health-impact-assessment
+•--------accessible-health-communication
+•--------health-literacy
+•--------strategic-communication
+•--------multi-sector-collaboration
+•--------health-education
+•--------asset-based-messaging
+•--------narrative-change
+•--------equity-focused-policy
+•--------policy-co-creation
+•--------cross-sector-partnerships
+•--------community-informed-policymaking
+•--------inclusive-communication-strategies
+•--------public-health-planning
+•--------upstream-public-health-policy
+•--------health-justice-narratives
+
+assurance
+•--------public-health-assurance
+•--------workforce-development
+•--------cultural-humility
+•--------culturally-competent-workforce
+•--------competency-based-training
+•--------strategic-public-health-leadership
+•--------public-health-education
+•--------health-equity-workforce
+•--------academic-partnerships
+•--------community-relevant-learning
+•--------lifelong-learning
+•--------evidence-based-practice
+•--------research-practice-linkage
+•--------quality-improvement
+•--------service-evaluation
+•--------policy-evaluation
+•--------health-system-accountability
+•--------healthcare-provider-engagement
+•--------public-health-infrastructure
+•--------continuous-improvement-culture
+•--------inclusive-leadership": ["https://storymaps.arcgis.com/stories/9034cae4498c4e96aca51f26ca64e931"],
+  "--assessment-
+•--------equity
+•--------health-status-indicators
+•--------data-interpretation
+•--------data-communication
+•--------disaggregated-data
+•--------structural-determinants-of-social-determinants-of-health-inequities
+•--------intermediary-determinants-of-social-determinants-of-health-
+•--------socieconomic-and-political-context
+•--------governance
+•--------macroeconomic-policies
+•--------social-policies
+•--------public-policies
+•--------culture-and-societal-values-
+•--------socieconomic-position
+•--------social-class
+•--------gender
+•--------ethnicity-
+•--------racism-
+
+policy-development:
+•--------trust-building
+•--------health-promotion-strategies
+•--------asset-based-communication
+•--------avoiding-harmful-narratives
+•--------multisector-coalitions
+•--------authentic-community-engagement
+•--------strengths-based-relationships
+•--------inclusive-partnerships
+•--------community-informed-solutions
+•--------policy-development
+•--------policy-equity-
+•--------correcting-historical-injustices
+•--------health-equity-policies
+•--------health-impact-assessment
+•--------community-resilience-policies
+•--------cross-sector-policy-collaboration
+
+additional-keywords
+•----------framing-
+•--------small-number-messaging-
+•--------template
+•--------small-sample-size
+•--------statistical-issues
+•--------reduced-statistical-power
+•--------wider-confidence-intervals": ["https://docs.google.com/document/d/1EkcOcVbXK27XQKf7eSGjmDEiHB2WSBak/edit?usp=sharing&ouid=108775875733014348658&rtpof=true&sd=true"],
+};hkz1fxuplcj09xfbaviewuspdrive_link"],
   "public-health-expertise": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link", "https://example.com/httpsdrivegooglecomfiled1eqhybv3b9rst0qjud_zowbsb9tri1hvnviewuspsharing"],
   "public-health-funding": ["https://example.com/httpsdrivegooglecomfiled15dyak8rp2cylhpjgg0wuwpaslbujgnjcviewuspsharing"],
   "public-health-governance": ["https://example.com/httpsdrivegooglecomdrivefolders1pqz_h54jriljhipcu8cnlhijgyypiwn0uspdrive_link"],
