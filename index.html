@@ -2,30 +2,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CCPHC Resource Search</title>
-<script src="./keywordMap.js"></script>
+<title>Keyword Search</title>
 </head>
 <body>
-<h1>Search the Resource Hub</h1>
-<input type="text" id="searchInput" placeholder="Enter keyword">
-<button onclick="performSearch()">Search</button>
 
+<div style="display:flex; justify-content:center; align-items:center; gap:10px; margin-top:50px; flex-wrap:wrap;">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search using keywords..."
+    style="padding:10px; font-size:16px; border:1px solid #ccc; border-radius:5px; width:300px;"
+  />
+  <button
+    onclick="performSearch()"
+    style="padding:10px 20px; font-size:16px; background:#007BFF; color:#fff; border:none; border-radius:5px; cursor:pointer;"
+  >
+    Search
+  </button>
+</div>
+
+<script src="keywordMap.js"></script>
 <script>
 function performSearch() {
   const rawQuery = document.getElementById('searchInput').value;
-  const result = searchKeyword(rawQuery);
+  const query = rawQuery.trim().toLowerCase();
 
-  if (!rawQuery.trim()) {
+  if (!query) {
     alert("Please enter a keyword to search.");
     return;
   }
 
-  if (result) {
-    window.open(result, "_blank");
+  let foundLinks = [];
+  for (const key in keywordMap) {
+    if (key.includes(query)) {
+      foundLinks = foundLinks.concat(keywordMap[key]);
+    }
+  }
+
+  if (foundLinks.length > 0) {
+    // Open first result in new tab
+    window.open(foundLinks[0], "_blank");
   } else {
-    alert("No matching resource found for: " + rawQuery);
+    alert("No results found for: " + query);
   }
 }
 </script>
+
 </body>
 </html>
